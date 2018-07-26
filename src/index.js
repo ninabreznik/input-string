@@ -1,6 +1,8 @@
 var bel = require('bel')
 var csjs = require('csjs-inject')
 
+module.exports = displayStringInput
+
 var fonts = [
   'https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css',
   'https://fonts.googleapis.com/css?family=Overpass+Mono" rel="stylesheet'
@@ -22,17 +24,16 @@ var colors = {
 
 function displayStringInput() {
 
-var input = bel`<input placeholder='some string'>`
+  var input = bel`<input placeholder='some string'>`
 
-var el = bel`
-  <div class=${css.inputContainer}>
-    <div class=${css.inputTitle}>string</div>
-    <div class=${css.inputFields}>
-      ${input}
+  return bel`
+    <div class=${css.inputContainer}>
+      <div class=${css.inputTitle}>string</div>
+      <div class=${css.inputFields}>
+        ${input}
+      </div>
     </div>
-  </div>
-`
-document.body.appendChild(el)
+  `
 }
 
 var css = csjs`
@@ -78,5 +79,3 @@ function inputStyle () {
     padding: 5px 10px;
   `
 }
-
-displayStringInput()
