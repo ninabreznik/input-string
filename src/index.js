@@ -3,7 +3,7 @@ var csjs = require('csjs-inject')
 
 module.exports = displayStringInput
 
-function displayStringInput({name, theme.classes: css}) {
+function displayStringInput({name, theme: {classes: css}}) {
 
   var input = bel`<input class=${css.inputField} placeholder='abc'>`
 
