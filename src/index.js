@@ -7,7 +7,7 @@ module.exports = displayStringInput
 function displayStringInput({theme: {classes: css}, type, cb}) {
   var input = bel`
     <div class=${css.stringField}>
-      <input class=${css.inputField} oninput=${validate} placeholder='abc'>
+      <input class=${css.inputField} id=${type} oninput=${validate} placeholder='abc'>
     </div>`
 
   return input
