@@ -1,6 +1,6 @@
 {
   "name": "input-string",
-  "version": "2.1.0",
+  "version": "2.1.2",
   "description": "A string-input-type component built with bel and csjs-inject",
   "main": "src/input-string.js",
   "scripts": {

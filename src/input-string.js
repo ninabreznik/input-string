@@ -6,11 +6,11 @@ module.exports = displayStringInput
 
 function displayStringInput ({ theme: { classes: css }, cb }) {
   const input = bel`<div class=${css.stringField}>
-    <input class=${css.inputField} data-type="string" oninput=${validate} placeholder='abc'>
+    <input class=${css.inputField} data-type="string" onclick="${(e)=>e.target.select()}" oninput=${validate} placeholder='abc'>
   </div>`
   return input
   function validate (e) {
     const value = e.target.value
-    cb(validator.getMessage('string', value), value)
+    cb(validator.getMessage('string', value), e.target, value)
   }
 }
